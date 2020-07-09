@@ -1,0 +1,6 @@
+Select 
+sum(capacity)/1024 as Capacity_GB,
+sum(used)/1024 as USED_GB,
+(sum(capacity)-sum(used))/1024 as Free_GB
+From STV_PARTITIONS
+Where part_begin=0;
